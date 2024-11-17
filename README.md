@@ -3,25 +3,19 @@
 [![Build](https://github.com/Lymphatus/caesium-image-compressor/actions/workflows/build-qt.yml/badge.svg)](https://github.com/Lymphatus/caesium-image-compressor/actions/workflows/build-qt.yml)
 
 Try it directly on browser at [caesium.app](https://caesium.app)
-
+- Readme file done by 21MIC0033 Bandaru Mahitha
 ###### v2.8.2
 
-![caesium_screenshot_280](https://github.com/user-attachments/assets/e5a6510a-58c5-4349-8563-f4e3ee84d5a0)
+![image](https://github.com/user-attachments/assets/e24b3cfb-986e-41e6-9e86-667673f1d5a7)
 
-### Special Thanks
 
-<a href="https://github.com/7eventech77"><img src="https://github.com/7eventech77.png" width="30px" alt="7eventech77" style="border-radius: 100%;" /></a>
-<a href="https://github.com/ClearRabbit"><img src="https://github.com/ClearRabbit.png" width="30px" alt="ClearRabbit" style="border-radius: 100%;" /></a>
-<a href="https://github.com/LushawnDev"><img src="https://github.com/LushawnDev.png" width="30px" alt="LushawnDev" style="border-radius: 100%;" /></a>
-<a href="https://github.com/yannkost"><img src="https://github.com/yannkost.png" width="30px" alt="yannkost" style="border-radius: 100%;" /></a>
-
-----------
+---------
 
 ### What is it for
 
-Caesium is an image compression software that helps you store, send and share digital pictures, supporting JPG, PNG and
-WebP formats.
-You can quickly reduce the file size (and resolution, if you want) by preserving the overall quality of the image.
+Caesium is an image compression software that helps you store, send and share digital pictures, supporting JPG, PNG and WebP formats.You can quickly reduce the file size (and resolution, if you want) by preserving the overall quality of the image.
+### Caesium Image Compressor: A free and open-source image compressor that can reduce image file sizes by up to 90% without losing original quality. It offers features like batch processing, drag-and-drop functionality, customizable compression levels, and support for various file formats and languages.
+
 
 ### Supported Platforms
 
@@ -60,7 +54,7 @@ Please open an [issue](https://github.com/Lymphatus/caesium-image-compressor/iss
 
 #### Build
 
-##### Step 0 (macOS Only)
+##### Step 0 (for macOS Only)
 
 You need to set up Sparkle in order to compile the project
 
@@ -74,24 +68,10 @@ sudo cp -R /usr/local/Caskroom/sparkle/1.27.1/Sparkle.framework /Library/Framewo
 You need to configure CMake first and the command is slightly different for all the platforms:
 Change the path in variables with the correct directories of the requirements.
 
-###### Windows
+###### for Windows only
 
 ```
 cmake -B build_dir -DCMAKE_PREFIX_PATH=/path/to/Qt/version -G "MinGW Makefiles"
-```
-
-###### MacOS
-
-```
-cmake -B build_dir -DCMAKE_PREFIX_PATH=/path/to/Qt/version/macos -DLIBSSH_INCLUDE_DIR=/libssh/dir/include -DSPARKLE_INCLUDE_DIR=/usr/local/Caskroom/sparkle/1.27.1/Sparkle.framework/Versions/Current/Headers
-```
-
-###### Linux
-
-Make sure you have all the requirements installed with you own package manager
-
-```
-cmake -B build_dir -DCMAKE_PREFIX_PATH=/path/to/Qt/version/gcc_64
 ```
 
 ##### Step 2
@@ -102,38 +82,21 @@ Then you can build with
 cmake --build build_dir --config Release --target caesium_image_compressor
 ```
 
-### Languages and translations
+##### Step 3
+Once the build is done, you can upload any image of your interest through the upload option and can adjust the quality, size, etc.. parameters. You can also choose whether you need a lossy or lossless compression. You have to select a location on your pc where the output should be stored.
+- The image I need to compress is : ![image](https://github.com/user-attachments/assets/b9d1bbca-3f46-4c94-a246-66fed3e0e3aa)
 
-The 1.0 version of Caesium had a lot of community made translations, but this 2.0 release has a whole new set of strings
-and no old translations can be used anymore.
-Caesium 2.0 is currently available in:
+- In my assignment, I chose for lossless compression with optimization level to 6 (max).
+![image](https://github.com/user-attachments/assets/7748570a-8bad-450d-849d-e06a65538d5a)
 
-| Language                                                                           | Progress |
-|------------------------------------------------------------------------------------|----------|
-| <img src="https://flagcdn.com/48x36/eg.png" width="24" height="18" alt="EG"> ar_EG | 77%      |
-| <img src="https://flagcdn.com/48x36/de.png" width="24" height="18" alt="DE"> de_DE | 72%      |
-| <img src="https://flagcdn.com/48x36/gr.png" width="24" height="18" alt="GR"> el_GR | 69%      |
-| <img src="https://flagcdn.com/48x36/us.png" width="24" height="18" alt="US"> en_US | 100%     |
-| <img src="https://flagcdn.com/48x36/es.png" width="24" height="18" alt="ES"> es_ES | 67%      |
-| <img src="https://flagcdn.com/48x36/ir.png" width="24" height="18" alt="IR"> fa_IR | 98%      |
-| <img src="https://flagcdn.com/48x36/fi.png" width="24" height="18" alt="FI"> fi_FI | 72%      |
-| <img src="https://flagcdn.com/48x36/fr.png" width="24" height="18" alt="FR"> fr_FR | 68%      |
-| <img src="https://flagcdn.com/48x36/in.png" width="24" height="18" alt="IN"> hi_IN | 72%      |
-| <img src="https://flagcdn.com/48x36/id.png" width="24" height="18" alt="ID"> id_ID | 69%      |
-| <img src="https://flagcdn.com/48x36/it.png" width="24" height="18" alt="IT"> it_IT | 100%     |
-| <img src="https://flagcdn.com/48x36/jp.png" width="24" height="18" alt="JP"> ja_JP | 97%      |
-| <img src="https://flagcdn.com/48x36/pl.png" width="24" height="18" alt="PL"> pl_PL | 69%      |
-| <img src="https://flagcdn.com/48x36/br.png" width="24" height="18" alt="BR"> pt_BR | 95%      |
-| <img src="https://flagcdn.com/48x36/ru.png" width="24" height="18" alt="RU"> ru_RU | 97%      |
-| <img src="https://flagcdn.com/48x36/sk.png" width="24" height="18" alt="SK"> sk_SK | 68%      |
-| <img src="https://flagcdn.com/48x36/tr.png" width="24" height="18" alt="TR"> tr_TR | 97%      |
-| <img src="https://flagcdn.com/48x36/cn.png" width="24" height="18" alt="CN"> zh_CN | 100%     |
-| <img src="https://flagcdn.com/48x36/tw.png" width="24" height="18" alt="TW"> zh_TW | 100%     |
+##### Step 4
+Once you select compress, you can see that the compressed image is saved in the given output location. 
+![image](https://github.com/user-attachments/assets/149ec49c-b81e-4737-aead-ea8c6b5ac13b)
 
-#### How to contribute with your translation
+The image before compression :
+![image](https://github.com/user-attachments/assets/d57e5415-e679-4f11-a8e8-9a7785a1f2ff)
 
-You can help translate by opening the `resources/i18n/caesium_en_US.ts` with QtLinguist or any XML editor. Rename it to
-your language (e.g. `caesium_it_IT.ts`) and translate all the sentences. Then you can start a pull request with your
-translated file.
-See [this pull request](https://github.com/Lymphatus/caesium-image-compressor/pull/106) as an example.
-Thanks to all the people who contributed.
+The image after compression :
+![image](https://github.com/user-attachments/assets/8d1fcac5-b2fe-470d-8f0a-892fb61557cc)
+
+----- end of the readme file -------
